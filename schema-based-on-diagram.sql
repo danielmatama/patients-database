@@ -21,6 +21,7 @@ CREATE TABLE invoices (
   id SERIAL PRIMARY KEY,
   total_amount DECIMAL(10, 2) NOT NULL,
   generated_at TIMESTAMP NOT NULL,
+  payed_at TIMESTAMP NOT NULL,
   medical_history_id INTEGER REFERENCES medical_histories(id)
 );
 
