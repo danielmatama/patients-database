@@ -33,3 +33,8 @@ CREATE TABLE invoice_items (
   treatment_id INTEGER REFERENCES treatments(id)
 );
 
+CREATE TABLE treatments_medical_histories (
+  treatment_id INTEGER REFERENCES treatments(id),
+  medical_history_id INTEGER REFERENCES medical_histories(id),
+  PRIMARY KEY (treatment_id, medical_history_id)
+);
